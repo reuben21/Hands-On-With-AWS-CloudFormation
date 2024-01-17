@@ -1,0 +1,25 @@
+# AWS CloudFormation template version
+AWSTemplateFormatVersion: "2010-09-09"
+
+# Description of the CloudFormation stack
+Description: "Deploying an EC2 instance"
+
+# Definition of AWS resources to be created
+Resources:
+
+  # Definition of an EC2 instance named "MyInstance"
+  MyInstance:
+    # Specifies the resource type as AWS EC2 Instance
+    Type: AWS::EC2::Instance
+
+    # Properties of the EC2 instance
+    Properties:
+
+      # Specifies the availability zone for the instance
+      AvailabilityZone: us-east-2a
+
+      # Specifies the Amazon Machine Image (AMI) ID for the instance
+      ImageId: ami-0cd3c7f72edd5b06d
+
+      # Specifies the instance type (t2.micro in this case)
+      InstanceType: t2.micro
